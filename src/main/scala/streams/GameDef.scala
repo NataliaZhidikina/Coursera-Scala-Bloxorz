@@ -142,9 +142,20 @@ trait GameDef {
      * Returns the list of positions reachable from the current block
      * which are inside the terrain.
      */
+    
+    /**
+     * def legalNeighbors: List[(Block, Move)] = neighbors.filter {case (b, _) => b.isLegal}
+     * this will not work because it requires new block b to its own terrain function defined
+     * we only define the top terrain for the top block
+     */
+
     def legalNeighbors: List[(Block, Move)] = neighbors.filter(isLegalNeighbor)
 
-    def isLegalNeighbor(x: (Block, Move)): Boolean = x._1.isLegal
+    def isLegalNeighbor (x: (Block, Move)) = {
+
+      terrain(x._1.b1)&&terrain(x._1.b2)
+    }
+
 
     /**
      * Returns `true` if the block is standing.
