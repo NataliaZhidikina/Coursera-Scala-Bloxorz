@@ -10,7 +10,7 @@ trait Solver extends GameDef {
   /**
    * Returns `true` if the block `b` is at the final position
    */
-  def done(b: Block): Boolean = ???
+  def done(b: Block): Boolean = (b.isStanding) && (b.b1==goal)
 
   /**
    * This function takes two arguments: the current block `b` and
@@ -28,7 +28,32 @@ trait Solver extends GameDef {
    * It should only return valid neighbors, i.e. block positions
    * that are inside the terrain.
    */
-  def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = ???
+  def neighborsWithHistory(b: Block, history: List[Move]): Stream[(Block, List[Move])] = {
+
+
+    /**
+     *
+     * assuming we have a neighbor block nBlock
+     * nBlock=b.legalNeighbors(0)._1 //first neighbor, block
+     * nMove=b. legalNeighbors(0)._2 //first neighbor move
+     * this result: 
+     * the history for getting to this neighbor block is 
+     * nHistory = nMove::cHistory
+     * 
+     * return (nBlock, nHistory)
+     * stream => return (nBlock, nHistory)#::(cBlock, cHistory)
+     * 
+     * so, current block's neighbor = neighbor + neighbor's neighbor
+     
+      */
+
+     def getHistory(x: (Block, Move)): (Block, List[Move]) = {
+      return (x._1, x._2::history)
+     }
+
+     b.legalNeighbors.toStream.map(getHistory)
+
+  }
 
   /**
    * This function returns the list of neighbors without the block
@@ -36,7 +61,10 @@ trait Solver extends GameDef {
    * make sure that we don't explore circular paths.
    */
   def newNeighborsOnly(neighbors: Stream[(Block, List[Move])],
-                       explored: Set[Block]): Stream[(Block, List[Move])] = ???
+                       explored: Set[Block]): Stream[(Block, List[Move])] = {
+
+    neighbors.filter((x: (Block, List[Move]))=> !explored.contains(x._1))
+  }
 
   /**
    * The function `from` returns the stream of all possible paths

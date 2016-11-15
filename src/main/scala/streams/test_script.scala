@@ -27,3 +27,17 @@ object testb extends StringParserTerrain {
      val bb:  List[Block] = List(new Block(new Pos (0, 0), new Pos(0, 1)), 
      							 new Block(new Pos(0, 0), new Pos(0, 0)))
   }
+
+object testc extends StringParserTerrain with Solver {
+    val level =
+      """ooo-------
+        |oSoooo----
+        |ooooooooo-
+        |-ooooooooo
+        |-----ooToo
+        |------ooo-""".stripMargin
+
+
+     val bb:  List[Block] = List(new Block(new Pos (0, 0), new Pos(0, 1)), 
+                   new Block(new Pos(0, 0), new Pos(0, 0)))
+  }
