@@ -1,53 +1,5 @@
 [0m[[0minfo[0m] [0m[32mBloxorzSuite:[0m[0m
-[0m[[0minfo[0m] [0m[31m- terrain function level 1 *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  java.lang.IndexOutOfBoundsException: 6[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.Vector.checkRangeConvert(Vector.scala:132)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.collection.immutable.Vector.apply(Vector.scala:122)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.StringParserTerrain$class.isValidPosition$1(StringParserTerrain.scala:56)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.StringParserTerrain$$anonfun$terrainFunction$1.apply(StringParserTerrain.scala:63)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.StringParserTerrain$$anonfun$terrainFunction$1.apply(StringParserTerrain.scala:63)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$1$$anon$1.<init>(BloxorzSuite.scala:52)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$1.apply$mcV$sp(BloxorzSuite.scala:45)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$1.apply(BloxorzSuite.scala:45)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$1.apply(BloxorzSuite.scala:45)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- findChar level 1 *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.StringParserTerrain$class.findChar(StringParserTerrain.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2$$anon$2.findChar(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.StringParserTerrain$class.startPos(StringParserTerrain.scala:80)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2$$anon$2.startPos$lzycompute(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2$$anon$2.startPos(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2$$anon$2.<init>(BloxorzSuite.scala:61)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2.apply$mcV$sp(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2.apply(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$2.apply(BloxorzSuite.scala:60)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- optimal solution for level 1 *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.Solver$class.solution(Solver.scala:86)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3$$anon$3.solution$lzycompute(BloxorzSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3$$anon$3.solution(BloxorzSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3$$anon$3.<init>(BloxorzSuite.scala:68)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3.apply$mcV$sp(BloxorzSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3.apply(BloxorzSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$3.apply(BloxorzSuite.scala:67)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
-[0m[[0minfo[0m] [0m[31m- optimal solution length for level 1 *** FAILED ***[0m[0m
-[0m[[0minfo[0m] [0m[31m  scala.NotImplementedError: an implementation is missing[0m[0m
-[0m[[0minfo[0m] [0m[31m  at scala.Predef$.$qmark$qmark$qmark(Predef.scala:225)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.Solver$class.solution(Solver.scala:86)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4$$anon$4.solution$lzycompute(BloxorzSuite.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4$$anon$4.solution(BloxorzSuite.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4$$anon$4.<init>(BloxorzSuite.scala:75)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4.apply$mcV$sp(BloxorzSuite.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4.apply(BloxorzSuite.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at streams.BloxorzSuite$$anonfun$4.apply(BloxorzSuite.scala:74)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.Transformer$$anonfun$apply$1.apply$mcV$sp(Transformer.scala:22)[0m[0m
-[0m[[0minfo[0m] [0m[31m  at org.scalatest.OutcomeOf$class.outcomeOf(OutcomeOf.scala:85)[0m[0m
-[0m[[0minfo[0m] [0m[31m  ...[0m[0m
+[0m[[0minfo[0m] [0m[32m- terrain function level 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- findChar level 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- optimal solution for level 1[0m[0m
+[0m[[0minfo[0m] [0m[32m- optimal solution length for level 1[0m[0m

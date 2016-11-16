@@ -96,10 +96,20 @@ trait Solver extends GameDef {
     //find next set
     // recurvive:  current#::from(next)
 
-    //
+      var newExplored = explored
+      if (!initial.isEmpty){
+      //not functional, lmited number
+        val initialBlock = initial.unzip._1
+        for (x <- initialBlock) {
+          newExplored += x
+        }
+      }
+
+
     def getNewNeighbors (x: (Block, List[Move])): Stream[(Block, List[Move])] = {
-      newNeighborsOnly(neighborsWithHistory(x._1, x._2), explored)
+      newNeighborsOnly(neighborsWithHistory(x._1, x._2), newExplored)
     }
+
     //generating the next set 
 
     if (initial.isEmpty) {return Stream.empty} else {
@@ -108,13 +118,6 @@ trait Solver extends GameDef {
                             blk <- initial
                             nbr <- getNewNeighbors(blk)
                          } yield nbr
-          
-          //not functional, lmited number
-          val initialBlock = initial.unzip._1
-          var newExplored = explored
-          for (x <- initialBlock) {
-            newExplored += x
-          }
 
           return initial #::: (from(next, newExplored))
     }
@@ -133,10 +136,7 @@ trait Solver extends GameDef {
     val initial = Stream((startBlock, List[Move]()))
     val explored = Set[Block]()
 
-    lazy val paths = for {
-                          x <- from(initial, explored)
-                          } yield x
-    paths
+    from(initial, explored)
 
   }
 
@@ -146,12 +146,9 @@ trait Solver extends GameDef {
    */
   lazy val pathsToGoal: Stream[(Block, List[Move])] = {
 
-    lazy val goal = for {
-      x <- pathsFromStart
-      if (done(x._1))
-    } yield x
+    def f(x:(Block, List[Move])): Boolean = {done(x._1)}
+    pathsFromStart.filter(f)
 
-    goal
   }
 
   /**
